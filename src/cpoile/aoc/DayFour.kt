@@ -3,11 +3,11 @@ package cpoile.aoc
 import java.io.File
 
 fun main(argh: Array<String>) {
-    assert(solveFourOne("DayFourOne-1.txt") == 4)
+    assert(solveFourOne("DayFourOne-test.txt") == 4)
     println(solveFourOne("DayFourOne.txt"))
     println(solveFourTwo("DayFourOne.txt"))
 
-    println(solveFourOne2("DayFourOne-1.txt"))
+    println(solveFourOne2("DayFourOne-test.txt"))
     println(solveFourTwo2("DayFourOne.txt"))
 }
 

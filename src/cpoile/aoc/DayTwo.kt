@@ -3,16 +3,16 @@ package cpoile.aoc
 import java.io.File
 
 fun main(argh: Array<String>) {
-    var checksum = solve("DayTwoOne-1.txt")
+    var checksum = solve("DayTwoOne-test.txt")
     println(checksum)
 
-    checksum = solve("DayTwoOne-input.txt")
+    checksum = solve("DayTwoOne.txt")
     println(checksum)
 
-    checksum = solve2("DayTwoTwo-1.txt")
+    checksum = solve2("DayTwoTwo-test.txt")
     println(checksum)
 
-    checksum = solve2("DayTwoTwo-input.txt")
+    checksum = solve2("DayTwoTwo.txt")
     println(checksum)
 }
 

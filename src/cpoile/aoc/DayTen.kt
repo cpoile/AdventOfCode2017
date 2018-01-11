@@ -15,10 +15,14 @@ val realInput = "147,37,249,1,31,2,226,0,161,71,254,243,183,255,30,70"
 fun main(argh: Array<String>) {
     // change this:
     val theInput  = realInput
-    val arr = IntArray(256) { i -> i }
+    println(knotHash(theInput))
+}
+
+fun knotHash(input: String): String {
+        val arr = IntArray(256) { i -> i }
     var idx = 0
     var skipSize = 0
-    val lengthSeq = theInput.toCharArray().map { it.toInt() } + arrayOf( 17, 31, 73, 47, 23 )
+    val lengthSeq = input.toCharArray().map { it.toInt() } + arrayOf( 17, 31, 73, 47, 23 )
 
     for (i in 1..64) {
         for (lengthInstr in lengthSeq) {
@@ -41,13 +45,13 @@ fun main(argh: Array<String>) {
         }
         sparseHash.addLast(accum)
     }
-    // now format it is as underscore hex
+    // now format it is as lowercase hex
     var hex = ""
     for (i in sparseHash) {
         hex += String.format("%02x", i)
     }
     //println("Answer: ${arr[0] * arr[1]}")
-    println("Answer: $hex")
+    return hex
 }
 
 fun getNextElements(arr: IntArray, curIdx: Int, numElems: Int): IntArray {
